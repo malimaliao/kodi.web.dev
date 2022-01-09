@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css">
+    <script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>
+    <script src="//cdn.staticfile.org/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <title>Kodi插件下载</title></head>
+<body>
+<div class="layui-container">
+    <div class="layui-row">
+        <div class="layui-col-xs12 layui-col-md12"><h3>Kodi插件下载</h3>
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th>名称</th>
+                    <th>版本</th>
+                    <th>类型</th>
+                    <th>资源</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>多啦搜索</td>
+                    <td>1.2.1</td>
+                    <td>视频插件</td>
+                    <td>
+                        <a href="https://github.com/malimaliao/xbmc-addons-chinese/blob/matrix/repo/plugin.video.duolasousuo/plugin.video.duolasousuo-1.2.1.zip">下载</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>韩剧视频</td>
+                    <td>2.1.0</td>
+                    <td>视频插件</td>
+                    <td>
+                        <a href="https://github.com/malimaliao/xbmc-addons-chinese/blob/matrix/repo/plugin.video.hanju/plugin.video.hanju-2.1.0.zip">下载</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" align="center">
+                        <div id="qrcode"></div>
+                        <br>请使用非微信扫码
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    // LayUI
+    layui.use(['layer', 'form'], function () {
+        var layer = layui.layer, form = layui.form;
+        layer.msg('Good luck');
+    });
+    // QR Code
+    new QRCode(document.getElementById("qrcode"), "https://kodi.maliao.workers.dev");
+</script>
+
+</body>
+</html>
