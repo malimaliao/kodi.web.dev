@@ -1,2 +1,2 @@
 # kodi.web.dev
-kodi web
+此项目会以web pages形式同步分发
